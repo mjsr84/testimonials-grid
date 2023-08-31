@@ -1,0 +1,157 @@
+:root {
+    --color1: hsl(263, 55%, 52%);
+    --color2: hsl(217, 19%, 35%);
+    --color3: hsl(219, 29%, 14%);
+    --color3transparent: hsla(219, 29%, 14%, 0.5);
+    --color4: hsl(0, 0%, 100%);
+    --color5: hsl(0, 0%, 81%);
+    --color5transparent: hsla(0, 0%, 81%, 0.5);
+    --color6: hsl(210, 46%, 95%);
+}
+
+body {
+    font-size: 13px;
+    font-family: arial, sans-serif;
+    background-color: var(--color6)
+}
+
+.testimonial-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        'one one two five'
+        'three four four five';
+}
+
+.testimonial {
+    background-color: var(--color4);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial:nth-child(1) {
+    background-color: var(--color1);
+    grid-area: one;
+}
+
+.testimonial:nth-child(2) {
+    background-color: var(--color2);
+    grid-area: two;
+}
+
+.testimonial:nth-child(3) {
+    grid-area: three;
+}
+
+.testimonial:nth-child(4) {
+    background-color: var(--color3);
+    grid-area: four;
+}
+
+.testimonial:last-child {
+    grid-area: five;
+}
+
+.testimonial-header {
+    display: grid;
+    grid-template-columns: 40px 3fr;
+    grid-template-areas:
+        'image name'
+        'image role';
+
+}
+
+.name {
+    grid-area: name;
+}
+
+.role {
+    grid-area: role;
+}
+
+.imagecontainer {
+    border: 2px solid var(--color5);
+    border-radius: 50%;
+    object-fit: contain;
+    position: relative;
+    height: 2em;
+    width: 2em;
+    overflow: hidden;
+    grid-area: image;
+}
+
+.profile-pic {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    grid-area: image;
+}
+
+
+.light-text {
+    color: var(--color4);
+}
+
+.light-transparent-text {
+    color: var(--color5transparent);
+}
+
+.dark-transparent-text {
+    color: var(--color3transparent);
+}
+
+.name {
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.role {
+    font-size: .7em;
+}
+
+.quote-bold {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.full-quote {
+    font-size: .9em;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-section {
+        grid-template-areas:
+            'one one one one'
+            'two two two two'
+            'three three three three'
+            'four four four four'
+            'five five five five';
+    }
+}
+
+footer {
+    background-color: var(--color3);
+    color: var(--color4);
+    padding: 20px;
+    text-align: center;
+    font-size: .8em;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+footer a {
+    color: var(--color4);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color1);
+}
+
+``` ```
